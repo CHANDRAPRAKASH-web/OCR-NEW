@@ -1,0 +1,15 @@
+# basic pipeline config
+detector:
+  method: "auto"  # "east", "pytesseract", or "auto"
+  east_model_path: "models/frozen_east_text_detection.pb"  # put model here if you want EAST
+recognizer:
+  lang: "eng"
+preprocess:
+  max_width: 1600
+  max_height: 1600
+  gray: true
+  bilateral_filter: true
+  adaptive_thresh: false
+output:
+  save_crops: true
+  export_json: true
